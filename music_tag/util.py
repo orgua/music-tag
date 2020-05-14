@@ -50,6 +50,7 @@ def get_easy_tracknum(afile, norm_key, _tag_name='tracknumber'):
 def set_easy_tracknum(afile, norm_key, val, _tag_name='tracknumber'):
     tracknumber = [int(i) for i in str(afile.mfile.get(_tag_name, '0/0')).split('/')]
     tracknumber += [0] * (2 - len(tracknumber))
+    tracknumber += [0] * (2 - len(tracknumber))
     tracknumber[0] = int(val)
     afile.set_raw(norm_key, _tag_name,
                   '/'.join(str(i) for i in tracknumber),

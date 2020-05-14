@@ -2,6 +2,7 @@
 # coding: utf-8
 
 # FIXME: does artwork need a proper shim?
+# TODO: only this file-format has remaining unnessessary int()-code
 
 import mutagen.mp4
 import mutagen.easymp4

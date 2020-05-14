@@ -79,11 +79,11 @@ class OggFile(AudioFile):
         'genre': TAG_MAP_ENTRY(getter='genre', setter='genre', type=str),
         'year': TAG_MAP_ENTRY(getter=('date', 'originaldate'),
                               setter=('date', 'originaldate'),
-                              type=int, sanitizer=util.sanitize_year),
+                              type=str, sanitizer=util.sanitize_year),
         'lyrics': TAG_MAP_ENTRY(getter='lyrics', setter='lyrics', type=str),
         'comment': TAG_MAP_ENTRY(getter='comment', setter='comment', type=str),
         'compilation': TAG_MAP_ENTRY(getter='compilation', setter='compilation',
-                                     type=int, sanitizer=util.sanitize_bool),
+                                     type=str, sanitizer=util.sanitize_bool),
 
         'artwork': TAG_MAP_ENTRY(getter=get_pictures, setter=set_pictures,
                                  remover=rm_pictures,
