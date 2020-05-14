@@ -40,8 +40,9 @@ def _subclass_spider_dfs(kls, _lst=None):
     return _lst
 
 
-def load_file(filename, err='raise'):
-    filename = os.path.expanduser(os.path.expandvars(filename))
+def load_file(filename, err='raise', path_expand:bool=True):
+	if path_expand:
+		filename = os.path.expanduser(os.path.expandvars(filename))
     mfile = mutagen.File(filename, easy=False)
     ret = None
 
