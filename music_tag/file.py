@@ -265,7 +265,7 @@ class AudioFile(object):
         'discnumber': TAG_MAP_ENTRY(type=str),
         'totaldiscs': TAG_MAP_ENTRY(type=str),
         'genre': TAG_MAP_ENTRY(type=str),
-        'year': TAG_MAP_ENTRY(type=str, sanitizer=util.sanitize_year),
+        'year': TAG_MAP_ENTRY(type=str, ),
         'compilation': TAG_MAP_ENTRY(type=str),
         'lyrics': TAG_MAP_ENTRY(type=str),
         'comment': TAG_MAP_ENTRY(type=str),

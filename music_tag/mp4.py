@@ -123,11 +123,11 @@ class Mp4File(AudioFile):
                                     type=str),
         'genre': TAG_MAP_ENTRY(getter='©gen', setter='©gen', type=str),
         'year': TAG_MAP_ENTRY(getter='©day', setter='©day', type=int,
-                              sanitizer=util.sanitize_year),
+                              ),
         'lyrics': TAG_MAP_ENTRY(getter='©lyr', setter='©lyr', type=str),
         'comment': TAG_MAP_ENTRY(getter='©cmt', setter='©cmt', type=str),
         'compilation': TAG_MAP_ENTRY(getter='cpil', setter='cpil', type=bool,
-                                     sanitizer=util.sanitize_bool),
+                                     ),
 
         'artwork': TAG_MAP_ENTRY(getter=get_artwork, setter=set_artwork,
                                  type=Artwork),
@@ -158,7 +158,7 @@ class EasyMp4File(Mp4File):
                                     type=str),
         'genre': TAG_MAP_ENTRY(getter='genre', setter='genre', type=str),
         'year': TAG_MAP_ENTRY(getter='date', setter='date', type=int,
-                              sanitizer=util.sanitize_year),
+                              ),
         'compilation': TAG_MAP_ENTRY(getter='compilation', setter='compilation',
                                      type=bool),
 
